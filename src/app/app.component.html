@@ -1,8 +1,30 @@
 <div>
   <h1>{{ title }} </h1>
-  <div class="row d-flex justify-content-center">
-    <div class="col-4">
+  <div class="row d-flex justify-content-evenly">
+    <div class="col-5">
       <h3 class="text-center">Liste des langages</h3>
+      <div class="row mb-4 filters">
+        <div class="col-sm-3">
+          <button (click)="filterLang(null)" class="btn btn-secondary">
+            All
+          </button>
+        </div>
+        <div class="col-sm-3">
+            <button (click)="filterLang('learned')" class="btn btn-primary">
+              Learned
+            </button>
+        </div>
+        <div class="col-sm-3">
+          <button (click)="filterLang('in progress')" class="btn btn-warning">
+            In progress
+          </button>
+        </div>
+        <div class="col-sm-3">
+          <button (click)="filterLang('not learned')" class="btn btn-danger">
+            Not learned
+          </button>
+        </div>
+      </div>
       <ul type="none" *ngFor="let item of langages">
         <li class="d-flex flex-row align-items-center justify-content-between"><span>Name : <b>{{item.name}}</b> </span> <span>Status : <b>{{item.status}}</b> </span> <button (click)="deleteLang(item.id)"
             class="btn ml-4 btn-danger">Delete</button></li>

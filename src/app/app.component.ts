@@ -17,9 +17,10 @@ export class AppComponent {
   langages = [
       {name : 'PHP', id: 0, status: 'learned'},
       {name : 'Javascript', id: 1, status: 'learned'},
-      {name : 'Java', id:2, status: 'learn in progress'},
-      {name : 'Python', id : 3, status: 'not learn'},
+      {name : 'Java', id:2, status: 'in progress'},
+      {name : 'Python', id : 3, status: 'not learned'},
   ];
+  tempLangs =this.langages;
 
   deleteLang(langId: number){
     // this.langages.splice(langId,1);  
@@ -33,5 +34,13 @@ export class AppComponent {
     this.langages.push({'name' : this.langName, 'id' : id, 'status' : this.langStatus});
     this.langName = '';
     this.langStatus = '';
+  }
+  filterLang(langStatusFilter:any){
+    if(langStatusFilter != null){
+      this.langages = this.tempLangs.filter((lang)=> langStatusFilter === lang.status);
+    }else{
+      this.langages = this.tempLangs;
+      return;
+    }
   }
 }
