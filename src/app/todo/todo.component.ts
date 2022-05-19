@@ -34,6 +34,10 @@ export class TodoComponent implements OnInit {
   }
   addLang(){
     // alert('addLang click')
+    if(this.langName == '' || this.langStatus == ''){
+      alert('Remplir tous les champs !');
+      return ;
+    }
     const lastIndex = this.langages.length - 1 ;
     const id = lastIndex + 1;
     this.langages.push({'name' : this.langName, 'id' : id, 'status' : this.langStatus});

@@ -27,7 +27,8 @@
         </div>
         <ul type="none" *ngFor="let item of langages">
           <li class="d-flex flex-row align-items-center justify-content-between"><span>Name : <b>{{item.name}}</b> </span> <span>Status : <b>{{item.status}}</b> </span> <button (click)="deleteLang(item.id)"
-              class="btn ml-4 btn-danger" mat-stroked-button>Delete</button></li>
+              class="btn ml-4 btn-danger" mat-stroked-button>Delete</button> <a href="todo/{{item.name}}" class="btn btn-secondary" mat-raised-button>Detail</a></li>
+      
           <hr>
         </ul>
       </div>

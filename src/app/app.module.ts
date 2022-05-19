@@ -11,6 +11,7 @@ import { TodoComponent } from './todo/todo.component';
 import { HeaderComponent } from './header/header.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { HomeComponent } from './home/home.component';
+import { DetailTodoComponent } from './detail-todo/detail-todo.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { HomeComponent } from './home/home.component';
     HeaderComponent,
     QuizComponent,
     HomeComponent,
+    DetailTodoComponent,
   ],
   imports: [
     BrowserModule,
