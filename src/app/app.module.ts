@@ -12,6 +12,7 @@ import { HeaderComponent } from './header/header.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { HomeComponent } from './home/home.component';
 import { DetailTodoComponent } from './detail-todo/detail-todo.component';
+import { LesDirectivesComponent } from './les-directives/les-directives.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { DetailTodoComponent } from './detail-todo/detail-todo.component';
     QuizComponent,
     HomeComponent,
     DetailTodoComponent,
+    LesDirectivesComponent,
   ],
   imports: [
     BrowserModule,

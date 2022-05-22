@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-todo',
+  selector: 'app-todo', 
   templateUrl: './todo.component.html',
   styleUrls: ['./todo.component.css']
 })
@@ -10,7 +10,14 @@ export class TodoComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.user  = this.users[this.idUser];
   }
+  idUser=1;
+  user:any;
+  users = [
+    { id : 0,name : "Zola ", profil : 'professeur', isProf : true},
+    {id : 1,name : "Diokou", profil : 'etudiant', isProf : false},
+  ]
   title = 'Todo List App';
   langName ='';
   langStatus='';
@@ -51,6 +58,10 @@ export class TodoComponent implements OnInit {
       this.langages = this.tempLangs;
       return;
     }
+  }
+  login(){
+    this.user = this.users[this.idUser];
+    console.log('logger un user' , this.user);
   }
 
 }
