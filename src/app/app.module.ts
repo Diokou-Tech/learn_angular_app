@@ -6,32 +6,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
-import { NotFoundComponent } from './error/not-found/not-found.component';
-import { TodoComponent } from './todo/todo.component';
-import { HeaderComponent } from './header/header.component';
-import { QuizComponent } from './quiz/quiz.component';
-import { HomeComponent } from './home/home.component';
-import { DetailTodoComponent } from './detail-todo/detail-todo.component';
-import { LesDirectivesComponent } from './les-directives/les-directives.component';
-
 
 @NgModule({
   declarations: [
     AppComponent,
-    NotFoundComponent,
-    TodoComponent,
-    HeaderComponent,
-    QuizComponent,
-    HomeComponent,
-    DetailTodoComponent,
-    LesDirectivesComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
