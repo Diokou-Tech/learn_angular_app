@@ -1,0 +1,10 @@
+.active-route{
+    color: white !important;
+    padding: 5px;
+    border-left: 3px solid orange;
+    border-right: 3px solid white;
+    border-radius: 4px 4px 5px;
+    margin: 4px;
+    font-size: bold;
+    text-transform: uppercase;
+}

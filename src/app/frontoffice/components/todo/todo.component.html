@@ -1,0 +1,57 @@
+<div>
+  <h1>{{ title }} </h1>
+  <div class="row d-flex justify-content-evenly">
+    <div class="col-5">
+      <h3 class="text-center">Liste des langages <small class="text-white  p-2 bg-secondary">{{ langages.length }} </small></h3>
+      <div class="row mb-4 filters">
+        <div class="col-sm-3">
+          <button mat-raised-button (click)="filterLang(null)" class="btn-secondary btn-sm">
+            All
+          </button>
+        </div>
+        <div class="col-sm-3">
+          <button mat-raised-button (click)="filterLang('learned')" class="btn-primary btn-sm">
+            Learned
+          </button>
+        </div>
+        <div class="col-sm-3">
+          <button mat-raised-button (click)="filterLang('in progress')" class="btn-warning btn-sm">
+            In progress
+          </button>
+        </div>
+        <div class="col-sm-3">
+          <button  mat-raised-button (click)="filterLang('not learned')" class="btn-danger btn-sm">
+            Not learned
+          </button>
+        </div>
+      </div>
+      <ul type="none" *ngFor="let item of langages">
+        <li class="d-flex flex-row align-items-center justify-content-between">
+          <span>Name : <b>{{item.name | uppercase }}</b> </span>
+          <span>Status : <b>{{item.status}}</b> </span> 
+          <button  *ngIf="user.isProf" (click)="deleteLang(item.id)" class="btn ml-4 btn-danger">Delete</button> 
+            <a href="todo/{{item.name}}" *ngIf="user.isProf" class="btn btn-secondary">Detail</a></li>
+        <hr>
+      </ul>
+    </div>
+    <div class="col-4">
+      <label for="profil">Choisir le profil</label>
+      <select [(ngModel)]="idUser" (change)="login()" class="form-control  form-select" name="profil" id="profil">
+        <option *ngFor="let item of users" value="{{item.id}}">{{item.name}} {{item.profil}} </option>
+      </select>
+      <form action="" *ngIf="user.isProf">
+        <h4 class="text-center">Formulaire d'ajout</h4>
+        <input type="text" [(ngModel)]="langName" name="langage" class=" col-sm form-control">
+        <div class="form-group">
+          <label for="status">Statut</label>
+          <select name="status" [(ngModel)]="langStatus" id="status" class="form-control">
+            <option value="">-- choice status of langage --</option>
+            <option *ngFor="let item of status" value="{{item}}">{{item}}</option>
+          </select>
+        </div>
+        <button (click)="addLang()" class="btn  m-4 btn-success mx-auto border">Save</button>
+      </form>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

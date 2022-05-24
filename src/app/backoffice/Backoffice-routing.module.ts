@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NotFoundComponent } from './shared/components/error/not-found/not-found.component';
+
 
 const routes: Routes = [
-  {path : 'not-found', component : NotFoundComponent},
   {path : '**', redirectTo: 'not-found', pathMatch: 'full'},
 ];
 
@@ -11,4 +10,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class BackofficeRoutingModule { }

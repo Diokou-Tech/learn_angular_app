@@ -1,0 +1,19 @@
+<div>
+    <button mat-raised-button color="red" (click)="toggle()">Mise en forme</button>
+    <p class="text-justify" [ngClass]="isSpecial ? 'special' : 'non-special'">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore omnis optio reiciendis sunt exercitationem beatae alias molestiae, repudiandae nam odio illo tenetur nobis minima deserunt temporibus vel molestias dolorum doloremque. nihil assumenda inventore, eveniet, perferendis magni ipsa nostrum autem aspernatur unde quod. Delectus dolorum et tenetur recusandae asperiores enim maxime quos voluptate?
+    </p>
+    <button mat-raised-button color="primary" (click)="afficher()">Toggle</button>
+    <p class="text-justify special" *ngIf="show">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore omnis optio reiciendis sunt exercitationem beatae alias molestiae, repudiandae nam odio illo tenetur nobis minima deserunt temporibus vel molestias dolorum doloremque. nihil assumenda inventore, eveniet, perferendis magni ipsa nostrum autem aspernatur unde quod. Delectus dolorum et tenetur recusandae asperiores enim maxime quos voluptate?
+    </p>
+    <div class="row">
+        <div class="col-5">
+            <h1>Le pipes </h1>
+        </div>
+        <div class="col-5">
+            <input type="text" class="form-control" #inputTest> <button mat-stroked-button (click)="logger(inputTest)"> logger </button>
+            {{ inputTest.value}}
+        </div>
+    </div>
+</div>
