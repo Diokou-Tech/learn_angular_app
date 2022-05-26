@@ -19,6 +19,7 @@ export class LesDirectivesComponent implements OnInit {
   afficher(){
     this.show = !this.show;
   }
+  
   logger(element:any){
     alert('VOici la valeur tapée ! ' + element.value);
   }

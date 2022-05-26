@@ -9,6 +9,8 @@ import { LesDirectivesComponent } from './components/les-directives/les-directiv
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FrontofficeComponent } from './frontoffice.component';
+import {MatIconModule} from "@angular/material/icon";
+
 
 @NgModule({
   declarations: [
@@ -24,7 +26,7 @@ import { FrontofficeComponent } from './frontoffice.component';
     NgModule,
     FormsModule,
     BrowserAnimationsModule,
-    FrontofficeRoutingModule
+    FrontofficeRoutingModule,
   ]
 })
 export class FrontofficeModule { }

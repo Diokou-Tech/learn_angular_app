@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './components/home/home.component';
-import { NotFoundComponent } from '../sharedmodule/components/error/not-found/not-found.component';
 import { TodoComponent } from './components/todo/todo.component';
 import { QuizComponent } from './components/quiz/quiz.component';
 import { DetailTodoComponent } from './components/detail-todo/detail-todo.component';
 import { LesDirectivesComponent } from './components/les-directives/les-directives.component';
+import { NotFoundComponent } from '../shared/components/error/not-found/not-found.component';
 
 const routes: Routes = [
   {path : '', component : HomeComponent},

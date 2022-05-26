@@ -8,12 +8,17 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import {QuizComponent} from "./frontoffice/components/quiz/quiz.component";
+import {LesDirectivesComponent} from "./frontoffice/components/les-directives/les-directives.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
+    QuizComponent,
+    LesDirectivesComponent
   ],
   imports: [
     BrowserModule,
@@ -21,6 +26,7 @@ import {MatButtonModule} from '@angular/material/button';
     FormsModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
