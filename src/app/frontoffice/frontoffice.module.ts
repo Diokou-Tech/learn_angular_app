@@ -9,7 +9,7 @@ import { LesDirectivesComponent } from './components/les-directives/les-directiv
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FrontofficeComponent } from './frontoffice.component';
-import {MatIconModule} from "@angular/material/icon";
+import { TodoComponent } from './components/todo/todo.component';
 
 
 @NgModule({
@@ -19,13 +19,14 @@ import {MatIconModule} from "@angular/material/icon";
     DetailTodoComponent,
     LesDirectivesComponent,
     FrontofficeComponent,
+    DetailTodoComponent,
+    TodoComponent
+
   ],
   imports: [
     CommonModule,
     MatButtonModule,
-    NgModule,
     FormsModule,
-    BrowserAnimationsModule,
     FrontofficeRoutingModule,
   ]
 })

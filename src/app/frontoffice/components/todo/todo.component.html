@@ -27,10 +27,10 @@
       </div>
       <ul type="none" *ngFor="let item of langages">
         <li class="d-flex flex-row align-items-center justify-content-between">
-          <span>Name : <b>{{item.name | uppercase }}</b> </span>
-          <span>Status : <b>{{item.status}}</b> </span> 
-          <button  *ngIf="user.isProf" (click)="deleteLang(item.id)" class="btn ml-4 btn-danger">Delete</button> 
-            <a href="todo/{{item.name}}" *ngIf="user.isProf" class="btn btn-secondary">Detail</a></li>
+          <span>Name : <b>{{item.name  }}</b> </span>
+          <span>Status : <b>{{item.status}}</b> </span>
+          <button  *ngIf="user.isProf" (click)="deleteLang(item.id)" class="btn ml-4 btn-danger">Delete</button>
+            <a href="portail/todo/{{item.name}}" *ngIf="user.isProf" class="btn btn-secondary">Detail</a></li>
         <hr>
       </ul>
     </div>
@@ -54,4 +54,3 @@
     </div>
   </div>
 </div>
-<router-outlet></router-outlet>

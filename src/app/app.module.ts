@@ -9,16 +9,14 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
-import {QuizComponent} from "./frontoffice/components/quiz/quiz.component";
-import {LesDirectivesComponent} from "./frontoffice/components/les-directives/les-directives.component";
+import { DemoPipe } from './demo.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     FooterComponent,
-    QuizComponent,
-    LesDirectivesComponent
+    HeaderComponent,
+    DemoPipe
   ],
   imports: [
     BrowserModule,

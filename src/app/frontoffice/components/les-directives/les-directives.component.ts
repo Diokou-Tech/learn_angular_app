@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class LesDirectivesComponent implements OnInit {
   isSpecial = false;
   show = true;
+  InputTest:number=1;
   constructor() { }
 
   ngOnInit(): void {
@@ -21,7 +22,8 @@ export class LesDirectivesComponent implements OnInit {
   }
   
   logger(element:any){
-    alert('VOici la valeur tapée ! ' + element.value);
+    this.InputTest = element.value;
+    console.log('VOici la valeur tapée ! ' + element.value);
   }
 
 }
