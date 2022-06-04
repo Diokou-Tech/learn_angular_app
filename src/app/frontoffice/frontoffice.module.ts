@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FrontofficeComponent } from './frontoffice.component';
 import { TodoComponent } from './components/todo/todo.component';
+import { FormulaireComponent } from './components/formulaire/formulaire.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { TodoComponent } from './components/todo/todo.component';
     LesDirectivesComponent,
     FrontofficeComponent,
     DetailTodoComponent,
-    TodoComponent
+    TodoComponent,
+    FormulaireComponent
 
   ],
   imports: [
